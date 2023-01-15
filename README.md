@@ -1,7 +1,7 @@
-Dane do MySQL i DotPay należy wprowadzić w pliku config.php
+Dane do MySQL i DotPay należy wprowadzić w pliku config.php<br /><br />
 
-Dane testowe:
-klient@test.com : test
-masazysta@test.com : test
-kierownik@test.com : test
+Dane testowe:<br />
+klient@test.com : test<br />
+masazysta@test.com : test<br />
+kierownik@test.com : test<br />
 admin@test.com : test
