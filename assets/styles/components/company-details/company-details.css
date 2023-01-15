@@ -1,0 +1,96 @@
+@font-face {
+  font-family: RobotoThin;
+  src: url("../../../fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url("../../../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: RobotoMedium;
+  src: url("../../../fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../../../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url("../../../fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: RobotoBlack;
+  src: url("../../../fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: ComforterBrush;
+  src: url("../../../fonts/Satisfy-Regular.ttf");
+}
+
+.content-profile .card {
+  max-width: 800px;
+  /* height: 600px; */
+  background-color: #94b9b1;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.content-profile .card img {
+  width: 200px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 1rem;
+}
+
+.content-profile .card .info {
+  color: #FFF;
+}
+
+.content-profile .card .info .name {
+  font-size: 2rem;
+  font-family: RobotoBold;
+}
+
+.content-profile .card .info .desc {
+  font-family: RobotoLight;
+}
+
+.content-profile .card .info .button {
+  display: block;
+  margin-top: 1rem;
+  background-color: #75a59b;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: .9rem;
+}
+
+.content-profile .card .info .button:hover {
+  background-color: #5b8c81;
+}
+
+.content-profile .card .info .label-row {
+  display: flex;
+}
+
+.content-profile .card .info .label {
+  padding-right: 3rem;
+}
+
+.content-profile .card .info .label .desc a {
+  margin-top: 1.5rem;
+  display: block;
+  font-size: .8rem;
+}
+/*# sourceMappingURL=company-details.css.map */

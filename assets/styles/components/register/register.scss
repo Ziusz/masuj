@@ -1,0 +1,192 @@
+@import '../../config/font';
+@import '../../config/colors';
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%; height: 100vh;
+    font-family: $font;
+    background-color: $cWhite;
+    color: $cDark;
+}
+
+body {
+    position: relative;
+}
+
+a {
+    color: $cDark;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 100%;
+    }
+
+    .col {
+        width: 100%;
+
+        &-image {
+            background-image: url("/assets/images/register_background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+        
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &-content {
+            padding: 2rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .title {
+                font-size: 3rem;
+                font-family: $fontBold;
+                margin-bottom: .5rem;
+                color: $cDarkBlue;
+            }
+
+            .desc {
+                margin-bottom: 1.5rem;
+                font-size: .9rem;
+                max-width: 420px;
+                width: 100%;
+                line-height: 1.5;
+
+                a {
+                    text-decoration: underline;
+                    transition: color 100ms ease-in-out;
+                    
+                    &:hover {
+                        color: darken($cDark, 30%);
+                    }
+                }
+
+                &:last-child {
+                    font-size: .8rem;
+                }
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+
+                label {
+                    margin-bottom: 1rem;
+                    width: 420px;
+
+                    span {
+                        font-size: .9rem;
+                        font-family: $fontMedium;
+                    }
+
+                    input {
+                        padding: .5rem;
+                        margin-top: .2rem;
+                        width: 420px;
+                        border: none;
+                        background-color: transparent;
+                        border-bottom: 1px solid #e2e2e2;
+                        font-family: $font;
+                        color: $cDark;
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        @media screen and (max-width: 768px) {
+                            width: 100%;
+                            max-width: 420px;
+                        }
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                    }
+                }
+
+                .with-checkbox {
+                    width: 100%;
+
+                    input {
+                        width: 20px;
+                    }
+                }
+
+                .submit-btn {
+                    padding: 1rem;
+                    background-color: $cDarkBlue;
+                    border: none;
+                    color: $cWhite;
+                    font-size: 1.1rem;
+                    font-family: $fontBold;
+                    max-width: 420px;
+                    width: 100%;
+                    transition: background 100ms ease-in-out;
+                    margin-bottom: 1rem;
+                    margin-top: 1rem;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: darken($cDarkBlue, 10%);
+                    }
+                }
+
+                .row {
+                    display: flex;
+                    gap: 20px;
+
+                    label {
+                        width: auto;
+                    }
+
+                    input {
+                        width: 200px;
+
+                        @media screen and (max-width: 768px) {
+                            width: 100%;
+                        }
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        flex-direction: column;
+                        gap: 0;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                padding: 1rem;
+                width: 100%;
+            }
+        }
+    }
+
+    .go-back {
+        width: 420px;
+        text-decoration: underline;
+        font-size: .9rem;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            max-width: 420px;
+        }
+    }
+}

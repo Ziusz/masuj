@@ -1,0 +1,156 @@
+@import '../../config/font';
+@import '../../config/colors';
+
+.content-users {
+    .table-content {
+        @media screen and (max-width: 1080px) {
+            overflow-x: scroll;
+            overflow-y: hidden;
+
+            table tr, th {
+                min-width: 150px;
+            }
+        }
+    }
+    .options {
+        padding: 1rem 0;
+    }
+    .search-bar {
+        width: 100%;
+        height: 3.25rem;
+        padding: .5rem 0;
+        border-bottom: 1px solid rgb(236, 236, 236);
+        position: sticky;
+        top: 0;
+
+        @media screen and (max-width: 768px) {
+            height: auto;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .search-input {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            i {
+                margin-right: .6rem;
+                opacity: .7;
+                color: $cDarkBlue;
+            }
+
+            .search-bar {
+                padding: .5rem;
+                border-radius: 5px;
+                border: 1px solid rgb(204, 204, 204);
+                font-size: .8rem;
+                width: 18rem; height: auto;
+                margin-right: .5rem;
+                position: relative;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    opacity: .6;
+                }
+
+                @media screen and (max-width: 1080px) {
+                    width: 100%;
+                }
+            }
+
+            .search-input {
+                position: relative;
+
+                i {
+                    color: lighten($cLightDark, 35%);
+                    position: absolute;
+                    right: .5rem; top: 50%;
+                    transform: translateY(-50%) rotate(90deg);
+                    font-size: .9rem;
+                }
+
+                @media screen and (max-width: 1080px) {
+                    width: 100%;
+                    margin-right: .5rem;
+                }
+            }       
+        }
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: .9rem;
+
+        th, tr, td {
+            width: 10rem;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        tr {
+            border-bottom: 1px solid #ececec;
+            transition: background 100ms ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $cWhiteBlue;
+            }
+        }
+
+        th {
+            &:hover {
+                cursor: default;
+            }
+        }
+
+        tr:nth-child(even) {
+            background-color: #ececec;
+            transition: background 100ms ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $cWhiteBlue;
+            }
+          }
+    }
+
+    .pages {
+        display: flex;
+        justify-content: right;
+        margin: 1rem 0;
+        gap: .5rem;
+
+        .page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px; height: 25px;
+            padding: 1rem;
+            color: $cWhite;
+            background-color: $cDarkBlue;
+            transition: background 100ms ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken($cDarkBlue, 10%);
+            }
+        }
+    }
+}
+
+.container .main .content .greet {
+    margin-bottom: 0;
+}
+

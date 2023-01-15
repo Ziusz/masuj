@@ -1,0 +1,46 @@
+@import '../../config/font';
+@import '../../config/colors';
+
+.stars {
+    max-width: 320px;
+    background-color: $cDarkBlue; 
+    border-radius: 5px;
+    padding: 1rem;
+    color: $cWhite;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .button {
+            background-color: $cWhite;
+            color: $cDarkBlue;
+            width: 100%;
+			cursor: pointer;
+        }
+    }
+
+    i {
+        font-size: 1.5rem;
+        transition: color 100ms ease-in-out;
+        float: right;
+    }
+
+	a:hover,
+	a:hover ~ a,	
+    i:hover,
+    i:hover ~ i {
+        cursor: pointer;
+        color: #ffd700;
+    }
+}

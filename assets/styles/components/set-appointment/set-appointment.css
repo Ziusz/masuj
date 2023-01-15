@@ -1,0 +1,253 @@
+@font-face {
+  font-family: RobotoThin;
+  src: url("/assets/fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url("/assets/fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: RobotoMedium;
+  src: url("/assets/fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("/assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url("/assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: RobotoBlack;
+  src: url("/assets/fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: ComforterBrush;
+  src: url("/assets/fonts/Satisfy-Regular.ttf");
+}
+
+.set-appointment {
+  max-width: 768px;
+  width: 100%;
+  height: auto;
+  background-color: #94b9b1;
+  border-radius: 5px;
+  color: #FFF;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .set-appointment {
+    max-width: 100%;
+  }
+}
+
+.set-appointment .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .set-appointment .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+}
+
+.set-appointment .massage-search {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .set-appointment .massage-search {
+    width: 100%;
+  }
+}
+
+.set-appointment .massage-search .search-input {
+  max-width: 250px;
+  width: 100%;
+  margin-right: .5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .set-appointment .massage-search .search-input {
+    max-width: 100%;
+  }
+}
+
+.set-appointment .massage-search .search-input input {
+  padding: .5rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.set-appointment .massage-search .search-input input:focus {
+  outline: none;
+}
+
+.set-appointment .massage-search .button {
+  background-color: #FFF;
+  color: #94b9b1;
+  padding: .5rem;
+  -webkit-transition: background 100ms ease-in-out;
+  transition: background 100ms ease-in-out;
+}
+
+.set-appointment .massage-search .button:hover {
+  background-color: #e6e6e6;
+}
+
+.set-appointment .fas {
+  font-size: 1.2rem;
+  margin-right: .5rem;
+}
+
+.set-appointment .location {
+  font-family: RobotoMedium;
+}
+
+.set-appointment form .section {
+  margin-bottom: 1.5rem;
+}
+
+.set-appointment form .section .header {
+  margin-bottom: 1rem;
+}
+
+.set-appointment form .section .header-border {
+  border-bottom: 1px solid #75a59b;
+}
+
+@media screen and (max-width: 768px) {
+  .set-appointment form .section .input-mobile {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .set-appointment form .section .input-mobile a {
+    margin-left: 1rem;
+    text-align: center;
+  }
+}
+
+.set-appointment form .section .input-tiles .tiles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+  .set-appointment form .section .input-tiles .tiles {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow-x: scroll !important;
+    padding-top: 2px;
+  }
+}
+
+.set-appointment form .section .input-tiles .tile {
+  max-width: 200px !important;
+  height: 150px;
+  background-color: #FFF !important;
+  color: #94b9b1;
+  border-radius: 5px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .set-appointment form .section .input-tiles .tile {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-right: 1rem;
+  }
+}
+
+.set-appointment form .section .input-tiles .tile-avatar {
+  width: 40%;
+}
+
+.set-appointment form .section .input-tiles .tile-avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.set-appointment form .section .input-tiles .tile-info {
+  padding: 1rem;
+  font-size: .9rem;
+}
+
+.set-appointment form .section .input-tiles .tile-info .name {
+  font-family: RobotoMedium;
+}
+
+.set-appointment form .section .input-tiles .tile-info .desc {
+  font-size: .8rem;
+  font-family: RobotoLight;
+}
+
+.set-appointment form .section .input-tiles .tile-info .select {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.set-appointment form .section .input-border {
+  border-bottom: 1px dashed #75a59b;
+}
+
+.set-appointment form .section .input select {
+  width: 230px;
+  padding: .5rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .set-appointment form .section .input select {
+    width: 100%;
+  }
+}
+
+.set-appointment form .section .input select:focus {
+  outline: none;
+}
+
+.set-appointment .button-darker {
+  background-color: #75a59b;
+}
+
+.set-appointment .button-darker:hover {
+  background-color: #5b8c81;
+}
+/*# sourceMappingURL=set-appointment.css.map */

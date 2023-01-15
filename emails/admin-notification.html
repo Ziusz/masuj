@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+  </style>
+  <style amp-custom>
+    .wrapper {
+    	width: 600px;
+     	margin: auto;
+      	font-family: 'Roboto'
+    }
+    
+    .greetings {
+    	text-align: center;
+      	font-size: 32px;
+      	margin-bottom: 15px;
+    }
+    
+    .infomation {
+    	text-align: center;
+      	margin-top: 30px;
+      	margin-bottom: 15px;
+    }
+    
+    .details-wrapper {
+    	width: 100%;
+        float: right;
+        text-align: right;
+        display: table;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+	
+	.contact-wrapper {
+    	width: 100%;
+        float: right;
+        text-align: right;
+        display: table;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    
+	.phone-number {
+    	width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    .email-address {
+    	width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+	
+    .reservation-number {
+    	width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+    }
+    
+    .personal-details {
+    	width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .transcation-details {
+    	margin-bottom: 65px;
+    }
+    
+    .theader .description {
+    	width: 70%;
+      	float: left;
+      	color: white;
+      	background: #94b9b1;
+      	height: 40px;
+    }
+    
+    .theader .description .text {
+    	margin: 10px;
+    }
+    
+    .theader .cost {
+    	width: 30%;
+      	color: white;
+      	float: right;
+      	background: #94b9b1;
+      	height: 40px;
+    }
+    
+    .theader .cost .text {
+    	margin: 10px;
+    }
+    
+    .tbody .description {
+    	width: 70%;
+      	float: left;
+      	height: 40px;
+    }
+    
+    .tbody .description .text {
+    	margin: 10px;
+    }
+    
+    .tbody .cost {
+    	width: 30%;
+      	float: left;
+      	height: 40px;
+    }
+    
+    .tbody .cost .text {
+    	margin: 10px;
+    }
+    
+    .btn {
+      margin-bottom: 35px;
+      text-decoration: none;
+      width: 100%;
+      background: white;
+      color: #353b48;
+      border-color: #94b9b1;
+      margin: 0 auto;
+      display: inline-block;
+      font-weight: 400;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      user-select: none;
+      border: 1px solid;
+      padding-top: 0.325rem;
+      padding-bottom: 0.325rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 0.25rem;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <center><img src="https://i.imgur.com/QA88Jkl.png" alt="Welcome" height="400"></img></center>
+    <div class="greetings">
+        System zarejestrował nową rezerwację. Potwierdź ją lub odrzuć za pomocą panelu "Zarządzaj rezerwacjami".
+    </div>
+    <hr>
+   	<div class="details-wrapper">
+      <div class="reservation-number">
+        <p>
+          Imię i nazwisko: {reservation_fullname}<br>
+          Adres: {reservation_address}<br>
+          Numer telefonu: {reservation_phonenumber}
+		    </p>
+      </div>
+      <div class="personal-details">
+        <p>
+			Termin wizyty: {reservation_startdatetime}<br>
+			Godzina: {reservation_datetimehour}<br>
+			Terapeuta: {reservation_employee}<br>
+		</p>
+      </div>
+    </div>
+    <div class="transaction-details">
+      <div class="theader">
+        <div class="description">
+          	<div class="text">USŁUGA</div>
+        </div>
+        <div class="cost">
+          	<div class="text">KOSZT</div>
+        </div>
+      </div>
+      <div class="tbody">
+        <div class="description">
+          	<div class="text">{reservation_service}</div>
+        </div>
+        <div class="cost">
+          	<div class="text">{reservation_cost} zł</div>
+        </div>
+      </div>
+    </div>
+    <hr>
+</div>
+</body>
+</html>

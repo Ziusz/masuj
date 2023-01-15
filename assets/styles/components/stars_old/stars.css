@@ -1,0 +1,77 @@
+@font-face {
+  font-family: RobotoThin;
+  src: url("../../../fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url("../../../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: RobotoMedium;
+  src: url("../../../fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../../../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url("../../../fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: RobotoBlack;
+  src: url("../../../fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: ComforterBrush;
+  src: url("../../../fonts/Satisfy-Regular.ttf");
+}
+
+.stars {
+  max-width: 180px;
+  border-radius: 5px;
+  padding: 1rem;
+  color: #c1c1c1;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .stars {
+    width: 100%;
+  }
+}
+
+.stars .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .stars .row {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stars .row .button {
+  background-color: #FFF;
+  color: #94b9b1;
+  width: 100%;
+}
+
+.stars i {
+  font-size: 1.5rem;
+  -webkit-transition: color 100ms ease-in-out;
+  transition: color 100ms ease-in-out;
+  float: right;
+}
+/*# sourceMappingURL=stars.css.map */

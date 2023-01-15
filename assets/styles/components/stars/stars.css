@@ -1,0 +1,87 @@
+@font-face {
+  font-family: RobotoThin;
+  src: url("/assets/fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url("/assets/fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: RobotoMedium;
+  src: url("/assets/fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("/assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url("/assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: RobotoBlack;
+  src: url("/assets/fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: ComforterBrush;
+  src: url("/assets/fonts/Satisfy-Regular.ttf");
+}
+
+.stars {
+  max-width: 320px;
+  background-color: #94b9b1;
+  border-radius: 5px;
+  padding: 1rem;
+  color: #FFF;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .stars {
+    width: 100%;
+  }
+}
+
+.stars .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .stars .row {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stars .row .button {
+  background-color: #FFF;
+  color: #94b9b1;
+  width: 100%;
+  cursor: pointer;
+}
+
+.stars i {
+  font-size: 1.5rem;
+  -webkit-transition: color 100ms ease-in-out;
+  transition: color 100ms ease-in-out;
+  float: right;
+}
+
+.stars a:hover,
+.stars a:hover ~ a,
+.stars i:hover,
+.stars i:hover ~ i {
+  cursor: pointer;
+  color: #ffd700;
+}
+/*# sourceMappingURL=stars.css.map */

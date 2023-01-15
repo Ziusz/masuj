@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+  </style>
+  <style amp-custom>
+    .wrapper {
+    	width: 600px;
+     	margin: auto;
+      	font-family: 'Roboto'
+    }
+    
+    .greetings {
+    	text-align: center;
+      	font-size: 32px;
+      	margin-bottom: 15px;
+    }
+    
+    .infomation {
+    	text-align: center;
+      	margin-top: 30px;
+      	margin-bottom: 15px;
+    }
+    
+	.contact-wrapper {
+    	width: 100%;
+        float: right;
+        text-align: right;
+        display: table;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    
+	.phone-number {
+    	width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    .email-address {
+    	width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+	
+    .details-wrapper {
+    	width: 100%;
+        float: right;
+        text-align: right;
+        display: table;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .reservation-number {
+    	width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+    }
+    
+    .personal-details {
+    	width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .transcation-details {
+    	margin-bottom: 65px;
+    }
+    
+    .theader .description {
+    	width: 70%;
+      	float: left;
+      	color: white;
+      	background: #94b9b1;
+      	height: 40px;
+    }
+    
+    .theader .description .text {
+    	margin: 10px;
+    }
+    
+    .theader .cost {
+    	width: 30%;
+      	color: white;
+      	float: right;
+      	background: #94b9b1;
+      	height: 40px;
+    }
+    
+    .theader .cost .text {
+    	margin: 10px;
+    }
+    
+    .tbody .description {
+    	width: 70%;
+      	float: left;
+      	height: 40px;
+    }
+    
+    .tbody .description .text {
+    	margin: 10px;
+    }
+    
+    .tbody .cost {
+    	width: 30%;
+      	float: left;
+      	height: 40px;
+    }
+    
+    .tbody .cost .text {
+    	margin: 10px;
+    }
+    
+    .btn {
+      margin-bottom: 35px;
+      text-decoration: none;
+      width: 100%;
+      background: white;
+      color: #353b48;
+      border-color: #94b9b1;
+      margin: 0 auto;
+      display: inline-block;
+      font-weight: 400;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      user-select: none;
+      border: 1px solid;
+      padding-top: 0.325rem;
+      padding-bottom: 0.325rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 0.25rem;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <center><img src="https://i.imgur.com/QA88Jkl.png" alt="Welcome" height="400"></img></center>
+    <div class="greetings">
+        Dziękujemy za dokonanie rezerwacji <br>w serwisie <i>masujmnie.pl</i>
+    </div>
+    <div class="information">
+        {reservation_info}
+    </div>
+    <hr>
+    <p style="text-align: center">Jeśli chcesz poznać szczegóły, to możesz skontaktować się:</p>
+   	<div class="contact-wrapper">
+      <div class="phone-number">
+        <p>
+          Telefonicznie:<br>{reservation_telephone}
+        </p>
+      </div>
+      <div class="email-address">
+        <p>
+			E-mail:<br>{reservation_email}
+		</p>
+      </div>
+    </div>
+	<p style="text-align: center; font-weight: 300; font-size: 10px">Masuj Mnie udostępnia Twoje dane osobowe wybranemu przez Ciebie terapeucie. Administratorem Twoich danych osobowych w związku z realizacją wizyty jest terapeuta lub firma Masuj Mnie. Terapeuci mają prawny obowiązek wykorzystać Twoje dane osobowe np. w celu prowadzenia dokumentacji medycznej. Prawo wynikające z RODO jak prawo do bycia zapomnianym czy prawo do dostępu do danych, a dotyczące zrealizowanej wizyty możesz zgłosić bezpośrednio pod jednym z kanałów kontaktów: biuro@masujmnie.pl, tel. +48 730 606 075</p>
+</div>
+</body>
+</html>

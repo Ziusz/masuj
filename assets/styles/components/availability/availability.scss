@@ -1,0 +1,155 @@
+@import '../../config/font';
+@import '../../config/colors';
+
+.availability {
+    max-width: 768px;
+    background-color: $cDarkBlue;
+    height: auto;
+    padding: 1rem;
+    border-radius: 5px;
+    color: $cWhite;
+    position: relative;
+    display: flex;
+
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+
+    [type="checkbox"]:not(:checked),
+	[type="checkbox"]:checked {
+		position: absolute;
+		left: 0;
+		opacity: 0.01;
+	}
+	[type="checkbox"]:not(:checked) + label,
+	[type="checkbox"]:checked + label {
+		position: relative;
+		padding-left: 2.3em;
+		font-size: 1.05em;
+		line-height: 1.7;
+		cursor: pointer;
+	}
+
+	/* checkbox aspect */
+	[type="checkbox"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 1.4em;
+		height: 1.4em;
+		border: 1px solid #aaa;
+		background: #FFF;
+		border-radius: .2em;
+		box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 rgba(203, 34, 237, .2);
+		-webkit-transition: all .275s;
+				transition: all .275s;
+	}
+
+	/* checked mark aspect */
+	[type="checkbox"]:not(:checked) + label:after,
+	[type="checkbox"]:checked + label:after {
+		content: '✕';
+		position: absolute;
+		top: .525em;
+		left: .18em;
+		font-size: 1.375em;
+		color: $cDarkBlue;
+		line-height: 0;
+		-webkit-transition: all .2s;
+				transition: all .2s;
+	}
+
+	/* checked mark aspect changes */
+	[type="checkbox"]:not(:checked) + label:after {
+		opacity: 0;
+		-webkit-transform: scale(0) rotate(45deg);
+				transform: scale(0) rotate(45deg);
+	}
+
+	[type="checkbox"]:checked + label:after {
+		opacity: 1;
+		-webkit-transform: scale(1) rotate(0);
+				transform: scale(1) rotate(0);
+	}
+
+	/* Disabled checkbox */
+	[type="checkbox"]:disabled:not(:checked) + label:before,
+	[type="checkbox"]:disabled:checked + label:before {
+		box-shadow: none;
+		border-color: #bbb;
+		background-color: #e9e9e9;
+	}
+
+	[type="checkbox"]:disabled:checked + label:after {
+		color: #777;
+	}
+
+	[type="checkbox"]:disabled + label {
+		color: #aaa;
+	}
+
+	/* Accessibility */
+	[type="checkbox"]:checked:focus + label:before,
+	[type="checkbox"]:not(:checked):focus + label:before {
+		box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 6px darken($cDarkBlue, 10%);
+	}
+
+    .section {
+        padding: 1rem 0;
+		
+		&:first-child {
+			margin-right: 5rem;
+		}
+
+        @media screen and (max-width: 768px) {
+            &:first-child {
+				margin-right: 2rem;
+			}
+        }
+
+        i {
+            margin-right: .25rem;
+        }
+
+        .button {
+            margin-top: 1rem;
+            display: block;
+            background-color: darken($cDarkBlue, 10%);
+            width: fit-content;
+
+            &:hover {
+                background-color: darken($cDarkBlue, 20%);
+            }
+        }
+
+        .title {
+            font-family: $fontMedium;
+        }
+
+        .inputs {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            input {
+                margin-left: .5rem;
+            }
+
+            .day {
+                margin-bottom: 1rem;
+                font-size: .9rem;
+                font-family: $fontLight;
+            }
+        }
+
+        .time {
+            margin-top: .5rem;
+
+            input {
+                padding: .5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import '../../config/font';
+@import '../../config/colors';
+
+.content-profile {
+    .card {
+        max-width: 800px;
+        /* height: 600px; */
+        background-color: $cDarkBlue;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+            width: 200px;
+            height: 100%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        .info {
+            color: $cWhite;
+
+            .name {
+                font-size: 2rem;
+                font-family: $fontBold;
+            }
+
+            .desc {
+                font-family: $fontLight;
+            }
+
+            .button {
+                display: block;
+                margin-top: 1rem;
+                background-color: darken($cDarkBlue, 10%);
+                width: fit-content;
+                font-size: .9rem;
+
+                &:hover {
+                    background-color: darken($cDarkBlue, 20%);
+                }
+            }
+        }
+    }
+}

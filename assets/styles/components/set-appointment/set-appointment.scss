@@ -1,0 +1,198 @@
+@import '../../config/font';
+@import '../../config/colors';
+
+
+.set-appointment {
+    max-width: 768px;
+    width: 100%;
+    height: auto;
+    background-color: $cDarkBlue;
+    border-radius: 5px;
+    color: $cWhite;
+    padding: 1rem;
+
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+    }
+
+    .row {
+        display: flex;
+        gap: 2rem;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    .massage-search {
+        width: 80%;
+        display: flex;
+        margin: 1rem 0;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        .search-input {
+            max-width: 250px;
+            width: 100%;
+            margin-right: .5rem;
+
+            @media screen and (max-width: 768px) {
+                max-width: 100%;
+            }
+        }
+
+        .search-input input {
+            padding: .5rem;
+            border: 1px solid darken($cWhite, 50%);
+            border-radius: 5px;
+            width: 100%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .button {
+            background-color: $cWhite;
+            color: $cDarkBlue;
+            padding: .5rem;
+            transition: background 100ms ease-in-out;
+
+            &:hover {
+                background-color: darken($cWhite, 10%);
+            }
+        }
+    }
+
+    .fas {
+        font-size: 1.2rem;
+        margin-right: .5rem;
+    }
+
+    .location {
+        font-family: $fontMedium;
+    }
+
+    form {
+
+        .section {
+            margin-bottom: 1.5rem;
+
+            .header {
+                margin-bottom: 1rem;
+            }
+
+            .header-border {
+                border-bottom: 1px solid darken($cDarkBlue, 10%);
+            }
+
+            .input {
+
+                &-mobile {
+                    @media screen and (max-width: 768px) {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+    
+                        a {
+                            margin-left: 1rem;
+                            text-align: center;
+                        }
+                    }
+                }
+                
+
+                &-tiles {
+
+                    .tiles {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+
+                        @media screen and (max-width: 768px) {
+                            display: flex !important;
+                            flex-direction: row;
+                            overflow-x: scroll !important;
+                            padding-top: 2px;
+                        }
+                    }
+
+                    .tile {
+                        max-width: 200px !important;
+                        height: 150px;
+                        background-color: $cWhite !important;
+                        color: $cDarkBlue;
+                        border-radius: 5px !important;
+                        overflow: hidden !important;
+                        padding: 0 !important;
+                        display: flex;
+
+                        @media screen and (max-width: 768px) {
+                            max-width: 100% !important;
+                            width: 100% !important;
+                            margin-right: 1rem;
+                        }
+
+                        &-avatar {
+                            width: 40%;
+                            
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        &-info {
+                            padding: 1rem;
+                            font-size: .9rem;
+
+                            .name {
+                                font-family: $fontMedium;
+                            }
+
+                            .desc {
+                                font-size: .8rem;
+                                font-family: $fontLight;
+                            }
+
+                            .select {
+                                display: block;
+                                margin-top: 1rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .input-border {
+                border-bottom: 1px dashed darken($cDarkBlue, 10%);
+            }
+
+            .input select {
+                width: 230px;
+                padding: .5rem;
+                border: 1px solid darken($cWhite, 50%);
+                border-radius: 5px;
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .button-darker {
+        background-color: darken($cDarkBlue, 10%);
+
+        &:hover {
+            background-color: darken($cDarkBlue, 20%);
+        }
+    }
+}

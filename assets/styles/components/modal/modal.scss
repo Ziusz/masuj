@@ -1,0 +1,103 @@
+@import '../../config/font';
+@import '../../config/colors';
+
+.modal {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background-color: $cWhite;
+    border: 1px solid darken($cWhite, 10%);
+    border-radius: 5px;
+    max-width: 420px; width: 100%;
+    max-height: 420px; height: auto;
+    z-index: 99;
+
+    &-hidden {
+        display: none;
+    }
+
+    &-info {
+        display: flex;
+
+        i {
+            margin-right: .5rem;
+            transform: translateY(1.5px);
+            color: $cDarkBlue;
+        }
+
+        .alert {
+            color: $cRed;
+        }
+
+        .content {
+            .modal-title {
+                font-size: 1rem;
+                font-family: $fontBold;
+                margin-bottom: .25rem;
+            }
+        
+            .modal-desc {
+                font-size: .8rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .form {
+        margin: 1rem 0;
+        padding-left: calc(.5rem + 16px);
+
+        .section {
+            font-size: .9rem;
+            display: flex;
+            flex-direction: column;
+            font-family: $fontBold;
+            margin-bottom: 1rem;
+
+            &-input {
+                padding: 1rem .5rem;
+                margin-top: .5rem;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+    }
+
+    .options {
+        display: flex;
+        justify-content: center;
+
+        .option-btn {
+            padding: .5rem 1.75rem;
+            background-color: $cDarkBlue;
+            color: $cWhite;
+            font-size: .8rem;
+            font-family: $fontBold;
+            transition: background 100ms ease-in-out;
+
+            &:hover {
+                background-color: darken($cDarkBlue, 10%);
+            }
+
+            &:last-child {
+                margin-left: 1rem;
+            }
+        }
+
+        .decline {
+            background-color: $cRed;
+
+            &:hover {
+                background-color: darken($cRed, 10%);
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "masujmnie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass ./assets/styles/global.scss ./style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

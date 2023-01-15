@@ -1,0 +1,152 @@
+@font-face {
+  font-family: RobotoThin;
+  src: url("../../../fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url("../../../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: RobotoMedium;
+  src: url("../../../fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../../../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url("../../../fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: RobotoBlack;
+  src: url("../../../fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: ComforterBrush;
+  src: url("../../../fonts/Satisfy-Regular.ttf");
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: #FFF;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  max-width: 420px;
+  width: 100%;
+  max-height: 420px;
+  height: auto;
+  z-index: 99;
+}
+
+.modal-hidden {
+  display: none;
+}
+
+.modal-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-info i {
+  margin-right: .5rem;
+  -webkit-transform: translateY(1.5px);
+          transform: translateY(1.5px);
+  color: #94b9b1;
+}
+
+.modal-info .alert {
+  color: #EE4C4C;
+}
+
+.modal-info .content .modal-title {
+  font-size: 1rem;
+  font-family: RobotoBold;
+  margin-bottom: .25rem;
+}
+
+.modal-info .content .modal-desc {
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+.modal .form {
+  margin: 1rem 0;
+  padding-left: calc(.5rem + 16px);
+}
+
+.modal .form .section {
+  font-size: .9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: RobotoBold;
+  margin-bottom: 1rem;
+}
+
+.modal .form .section-input {
+  padding: 1rem .5rem;
+  margin-top: .5rem;
+}
+
+.modal .form .section-input:focus {
+  outline: none;
+}
+
+.modal .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .options .option-btn {
+  padding: .5rem 1.75rem;
+  background-color: #94b9b1;
+  color: #FFF;
+  font-size: .8rem;
+  font-family: RobotoBold;
+  -webkit-transition: background 100ms ease-in-out;
+  transition: background 100ms ease-in-out;
+}
+
+.modal .options .option-btn:hover {
+  background-color: #75a59b;
+}
+
+.modal .options .option-btn:last-child {
+  margin-left: 1rem;
+}
+
+.modal .options .decline {
+  background-color: #EE4C4C;
+}
+
+.modal .options .decline:hover {
+  background-color: #ea1d1d;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=modal.css.map */
